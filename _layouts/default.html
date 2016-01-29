@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a target="#home" class="active item">Home</a>
+            <a target="#about" class="item">About</a>
+            <a target="#experience" class="item">Experience</a>
+            <a target="#projects" class="item">Projects</a>
+            <a target="#contact" class="item">Contact</a>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <a target="#home" class="active item">Home</a>
+        <a target="#about" class="item">About</a>
+        <a target="#experience" class="item">Experience</a>
+        <a target="#projects" class="item">Projects</a>
+        <a target="#contact" class="item">Contact</a>
+    </div>
+
+
+    <!-- Page Contents -->
+    <div class="pusher">
+
+        {% include header.html %} 
+        {% include about.html %} 
+        {% include experience.html %} 
+        {% include projects.html %} 
+        {% include contact.html%} 
+        {% include footer.html %}
+        
+    </div>
+
+</body>
+
+</html>

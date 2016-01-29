@@ -1,0 +1,7 @@
+_site
+.sass-cache
+.jekyll-metadata
+node_modules
+semantic/src
+semantic/tasks
+semantic/gulpfiles.js
