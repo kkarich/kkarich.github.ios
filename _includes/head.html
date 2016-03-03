@@ -178,6 +178,46 @@
                 .sidebar('attach events', '.sidebar.menu a')
             ;
             })
+            
+            $.ajax( "https://api.github.com/users/kkarich/repos" )
+                .done(function(projects) {
+                    console.log( "success",projects );
+                    for(var i in projects){
+                        var project = projects[i];
+                        
+                       $( "#projects .cards" ).append( 
+                           `<div class="card">
+                                <div class="image">
+                                    <img src="http://semantic-ui.com/images/wireframe/image.png">
+                                </div>
+                                <div class="content">
+                                    <div class="header">` + project.name +  `</div>
+                                    <div class="meta">
+                                        ` + project.updated_at +  `
+                                    </div>
+                                    <div class="description">
+                                        ` + project.description +  `
+                                    </div>
+                                </div>
+                            </div>
+                `);
+                        
+                    }
+                })
+                .fail(function() {
+                    alert( "error" );
+                })
+                
+                
+            $.ajax( "https://api.github.com/users/kkarich" )
+                .done(function(user) {
+                    console.log( "success",user );
+                    
+                    
+                })
+                .fail(function() {
+                    alert( "error" );
+                })
   ;
     </script>
 </head>
